@@ -1,5 +1,6 @@
 import { Drawer } from "./components/drawer";
 import { Navbar } from "./components/navbar";
+import { Product } from "./components/product";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 import { useToggleMenuStore } from "./store";
 
@@ -15,6 +16,9 @@ function App() {
         </>
       )}
       <Navbar />
+      <main>
+        <Product />
+      </main>
     </div>
   );
 }

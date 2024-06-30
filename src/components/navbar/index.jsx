@@ -16,7 +16,7 @@ export const Navbar = () => {
       >
         <img src={menuBar} alt="menubar icon" />
       </button>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-6">
         <Logo />
         <Links />
       </div>
