@@ -3,7 +3,7 @@ import { ProductImage } from './productImage'
 
 export const Product = () => {
   return (
-    <div className='flex gap-4'>
+    <div className='flex gap-4 py-4'>
       <ProductImage />
     </div>
   )

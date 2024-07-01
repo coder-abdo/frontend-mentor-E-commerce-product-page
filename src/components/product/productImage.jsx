@@ -14,7 +14,7 @@ export const ProductImage = () => {
   const images = [firstProductImage, secondProductImage, thirdproductImage, fourthProductImage];
   const thumbnials = [firstProductThumbnailImage, secondProductThumbnailImage, thirdProductThumbnailImage, fourthProductThumbnailImage]
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-4 justify-center items-center mx-auto'>
       <LightBox thumbnials={thumbnials} images={images} isMobile={isMobile} />
     </div>
   )
