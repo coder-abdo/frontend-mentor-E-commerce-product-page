@@ -53,17 +53,20 @@ export const useToggleMenuStore = create()(
 );
 
 export const useLightBoxStore = create()(
-  immer(set => ({
+  immer((set) => ({
     isClicked: false,
     selectedImage: 0,
-    openLightBox: () => set(state => {
-      state.isClicked = true
-    }),
-    closeLightBox: () => set(state => {
-      state.isClicked = false
-    }),
-    changeImage: (idx) => set(state => {
-      state.selectedImage = idx;
-    })
-  }))
-)
+    openLightBox: () =>
+      set((state) => {
+        state.isClicked = true;
+      }),
+    closeLightBox: () =>
+      set((state) => {
+        state.isClicked = false;
+      }),
+    changeImage: (idx) =>
+      set((state) => {
+        state.selectedImage = idx;
+      }),
+  })),
+);
