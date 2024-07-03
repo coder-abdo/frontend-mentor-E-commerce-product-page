@@ -8,9 +8,9 @@ export const useCartStore = create(
       cartproducts: [],
       addToCart: (item) =>
         set((state) => {
-          if (state.cartproducts.find((i) => i.id === item.id)) {
+          if (state.cartproducts.find((i) => i.title === item.title)) {
             state.products = state.cartproducts.map((i) => {
-              i.quantity++;
+              i.quantity = item.quantity;
               return i;
             });
           } else {
