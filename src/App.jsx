@@ -18,9 +18,7 @@ function App() {
         </>
       )}
       <Navbar />
-      <main>
-        <Product />
-      </main>
+      <Product />
     </div>
   );
 }

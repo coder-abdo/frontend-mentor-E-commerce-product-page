@@ -3,9 +3,21 @@ import { ProductBtn } from "./prdocutBtn";
 import plusIcon from "../../assets/images/icon-plus.svg";
 import minusIcon from "../../assets/images/icon-minus.svg";
 import { AddToCartBtn } from "./addToCartBtn";
+import { useCartStore } from "../../store";
 
 export const ProductDescription = () => {
-  const [productQuantity, setProductQuantity] = React.useState(0);
+  const products = useCartStore((state) => state.cartproducts);
+  const [productQuantity, setProductQuantity] = React.useState(
+    products[0].quantity || 0,
+  );
+  const addProductToCart = useCartStore((state) => state.addToCart);
+  const handleAddToCart = () => {
+    addProductToCart({
+      title: "fall limited edition sneakers",
+      quantity: productQuantity,
+      price: 125,
+    });
+  };
   return (
     <div className="px-4 py-10 flex flex-col capitalize">
       <h3 className="text-sm mb-2 font-semibold text-gray-600">
@@ -46,7 +58,7 @@ export const ProductDescription = () => {
             <img src={plusIcon} alt="plus icon" />
           </ProductBtn>
         </div>
-        <AddToCartBtn />
+        <AddToCartBtn handleClick={handleAddToCart} />
       </div>
     </div>
   );
