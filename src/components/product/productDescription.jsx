@@ -8,7 +8,7 @@ import { useCartStore } from "../../store";
 export const ProductDescription = () => {
   const products = useCartStore((state) => state.cartproducts);
   const [productQuantity, setProductQuantity] = React.useState(
-    products[0].quantity || 0,
+    products[0]?.quantity || 0,
   );
   const addProductToCart = useCartStore((state) => state.addToCart);
   const handleAddToCart = () => {
