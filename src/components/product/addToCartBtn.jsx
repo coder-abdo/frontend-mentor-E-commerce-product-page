@@ -1,8 +1,9 @@
-export const AddToCartBtn = ({ handleClick }) => {
+export const AddToCartBtn = ({ handleClick, isDisabled }) => {
   return (
     <button
       onClick={handleClick}
-      className="py-4 px-8 text-sm font-bold flex gap-3 rounded  justify-center items-center bg-orange-500 text-black"
+      disabled={isDisabled}
+      className={`py-4 px-8 text-sm font-bold flex gap-3 rounded  justify-center items-center bg-orange-500 text-black ${isDisabled && "opacity-70 cursor-not-allowed"}`}
     >
       <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
         <path

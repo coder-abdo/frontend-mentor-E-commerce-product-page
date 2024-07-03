@@ -58,7 +58,10 @@ export const ProductDescription = () => {
             <img src={plusIcon} alt="plus icon" />
           </ProductBtn>
         </div>
-        <AddToCartBtn handleClick={handleAddToCart} />
+        <AddToCartBtn
+          handleClick={handleAddToCart}
+          isDisabled={productQuantity < 1}
+        />
       </div>
     </div>
   );
