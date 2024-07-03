@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor solution URL](https://www.frontendmentor.io/solutions/e-commerce-product-page-Ad1dDTNhCT)
+- Live Site URL: [vercel](https://frontend-mentor-e-commerce-product-page-alpha.vercel.app/)
 
 ## My process
 
